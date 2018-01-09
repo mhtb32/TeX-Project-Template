@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{UCT Report Template}                             % Title
+\author{Linus C. Brendel}                               % Author
+\date{\today}                                           % Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+    \centering
+    \vspace*{0.5 cm}
+   % \includegraphics[scale = 0.75]{UCT.jpg}\\[1.0 cm]   % University Logo
+    \textsc{\LARGE University of Cape Town}\\[2.0 cm]   % University Name
+    \textsc{\Large Course Code}\\[0.5 cm]               % Course Code
+    \textsc{\large Course Name}\\[0.5 cm]               % Course Name
+    \rule{\linewidth}{0.2 mm} \\[0.4 cm]
+    { \huge \bfseries \thetitle}\\
+    \rule{\linewidth}{0.2 mm} \\[1.5 cm]
+    
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \emph{Author:}\\
+            \theauthor
+            \end{flushleft}
+            \end{minipage}~
+            \begin{minipage}{0.4\textwidth}
+            \begin{flushright} \large
+            \emph{Student Number:} \\
+            XXXXXX000                                   % Your Student Number
+        \end{flushright}
+    \end{minipage}\\[2 cm]
+    
+    {\large \thedate}\\[2 cm]
+ 
+    \vfill
+    
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{About this design}
+This is a simple report template with the UCT logo. Feel free to use/modify it to suit your needs. Variables that need to be altered have been commented to make modifications easier. For example if you need to change the university logo, look for the comment \texttt{\% University Logo} in this file and then make appropriate modifications in that line.
+
+A Table of Contents and a bibliography have also been implemented. To add entries to your bibliography, simply edit \texttt{biblist.bib} in the root folder and then use the \texttt{\textbackslash cite\{\ldots\}} command in \texttt{main.tex} \cite{bibtex}. The Table of Contents will be updated automatically.
+
+I hope that you find this template both visually appealing and useful. \\
+
+\hspace{1 cm}--- Linus
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{biblist}
+
+\end{document}

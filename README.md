@@ -4,7 +4,7 @@ A project report template using Xepersian package.
 
 ## Contribution
 
-Your contribution is so appreciated to make this a better LaTeX template! Just Fork the repo, make required changes and make a pull request when you're done.
+Your contribution is welcomed to make this a better LaTeX template! Just Fork the repo, make required changes and make a pull request when you're done.
 
 ## Suggestion
 
